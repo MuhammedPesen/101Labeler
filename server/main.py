@@ -63,8 +63,6 @@ async def detect_objects(file: UploadFile = File(...), api_key: str = Depends(ge
     
     return response
 
-# app = FastAPI()
-
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="localhost", port=8080)
