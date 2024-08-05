@@ -10,8 +10,8 @@ from ultralytics.utils.plotting import Annotator, colors
 
 app = FastAPI()
 
-# Load your trained model
-model = YOLO('best.pt')  # Replace with the path to your trained model
+# Load the model
+model = YOLO('best.pt') 
 
 
 # API Key setup
@@ -50,7 +50,6 @@ async def detect_objects(file: UploadFile = File(...), api_key: str = Depends(ge
             detection_labels.append(label)
             annotator.box_label(b, label, color=colors(c, True))
     
-    # Calculate the sum of labels
     label_sum = sum([int(x) for x in detection_labels if (x != "NULL" and x != "JOK")])
     
     # Convert the image to bytes
