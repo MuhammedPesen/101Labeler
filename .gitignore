@@ -1,11 +1,7 @@
 digits_updated
 image.png
-model.pth
-test.ipynb
-data*
-ok101_data
+*data*
 runs
 yolo*
-test.ipynb
-train.ipynb
+*ipynb
 *.png
