@@ -57,7 +57,6 @@ async def detect_objects(file: UploadFile = File(...), api_key: str = Depends(ge
     is_success, buffer = cv2.imencode(".png", img)
     io_buf = io.BytesIO(buffer)
     
-    # Create a custom response with both the image and the label sum
     response = Response(content=io_buf.getvalue(), media_type="image/png")
     response.headers["X-Label-Sum"] = str(label_sum)
     
