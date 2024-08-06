@@ -21,7 +21,7 @@ Frontend:
 ## Setup
 
 1. Install required Python packages in server/requirements.txt
-```bash
+```
 pip install -r server/requirements.txt
 ```
 
@@ -32,7 +32,16 @@ pip install -r server/requirements.txt
 4. Run the server:
 I used the free version of ngrok for local testing. If you also use ngrok, make sure to update the URL in the Flutter code. I attempted to deploy the backend to Vercel's free tier, but it wasn't suitable for running inference, so the deployment failed.
 
-5. Run the app:
+5. Setup the Flutter libraries:
+```
+flutter pub get
+````
+
+6. Run the app:
+```
+flutter run --dart-define=ACCESS_TOKEN=the_api_key
+```
+
 ## How to Use
 
 1. Open the app on your Android phone.
